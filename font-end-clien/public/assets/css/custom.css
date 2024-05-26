@@ -1,0 +1,49 @@
+.el-select .el-input.is-focus .el-input__inner,
+.el-select .el-input__inner:focus,
+.el-input__inner:focus {
+  border-color: rgb(221, 63, 36) !important;
+}
+
+.el-tabs__item{
+  font-size: 15px !important;
+}
+.review .el-tabs__item:hover, .review .el-tabs__item.is-active{
+  color: rgb(221, 63, 36) !important;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: rgb(221, 63, 36) !important;
+}
+
+.job-post-details .job-description__item h3 {
+  font-size: 18px;
+}
+.job-post-details .job-description__item--content p,
+.job-post-details .job-description__item--content ul li {
+  margin-left: 30px !important;
+  list-style: disc;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.el-form--label-top .el-form-item__label {
+  padding: 0 !important;
+  margin-bottom: 5px !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+img{
+  width:100%;
+} 
+.el-tabs__item:hover,
+.el-tabs__item.is-active{
+  color: #00b14f !important;
+}
+.review-form .el-rate__icon,
+.review .rate-common .el-rate__icon {
+  font-size: 30px !important;
+}
+
+.review .el-tabs__item{
+  font-size: 18px !important;
+}

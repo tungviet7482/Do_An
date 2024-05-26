@@ -1,0 +1,64 @@
+import Vue from 'vue'
+
+import Cookies from 'js-cookie'
+import 'normalize.css/normalize.css' // a modern alternative to CSS resets
+import Element from 'element-ui'
+import './styles/element-variables.scss'
+import enLang from 'element-ui/lib/locale/lang/en'
+import axios from './utils/request'
+import '@/styles/index.scss' // global css
+
+import App from './App'
+import store from './store'
+import router from './router'
+
+import './icons' // icon
+import './permission' // permission control
+import './utils/error-log' // error log
+
+import * as filters from './filters' // global filters
+import '@/assets/css/bootstrap.min.css'
+import '@/assets/css/owl.carousel.min.css'
+import '@/assets/css/flaticon.css'
+import '@/assets/css/price_rangs.css'
+import '@/assets/css/slicknav.css'
+import '@/assets/css/animate.min.css'
+import '@/assets/css/magnific-popup.css'
+import '@/assets/css/fontawesome-all.min.css'
+import '@/assets/css/themify-icons.css'
+import '@/assets/css/slick.css'
+import '@/assets/css/nice-select.css'
+import '@/assets/css/style.css'
+
+
+/**
+ * If you don't want to use mock-server
+ * you want to use MockJs for mock api
+ * you can execute: mockXHR()
+ *
+ * Currently MockJs will be used in the production environment,
+ * please remove it before going online ! ! !
+ */
+if (process.env.NODE_ENV === 'production') {
+  const { mockXHR } = require('../mock')
+  mockXHR()
+}
+
+Vue.use(Element, {
+  size: Cookies.get('size') || 'medium', // set element-ui default size
+  locale: enLang 
+})
+
+// register global utility filters
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+window.axios = axios
+window.bus = new Vue();
+Vue.config.productionTip = false
+new Vue({
+  el: '#app',
+  router,
+  store,
+  render: h => h(App)
+})

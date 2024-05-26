@@ -1,0 +1,9 @@
+.vs/
+Demo.Application/bin/
+Demo.Web/bin/
+Demo.Domain/bin/
+Domain.Infrastructure/bin/
+Demo.Application/obj/
+Demo.Web/obj/
+Demo.Domain/obj/
+Domain.Infrastructure/obj/
